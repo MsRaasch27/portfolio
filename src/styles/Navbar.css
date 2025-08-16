@@ -1,0 +1,44 @@
+/* Add navbar styling */
+.navbar-inverse {
+    background-color: #6B0F9C;
+    border-color: #500B75;
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ffc600;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    background-color: #500B75;
+    color: #ffc600;
+}
+
+/* Make navbar items display horizontally */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li a {
+    display: block;
+    padding: 15px 15px;
+    text-decoration: none;
+}

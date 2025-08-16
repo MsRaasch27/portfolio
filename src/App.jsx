@@ -1,19 +1,35 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Navbar from './components/Navbar';
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import Header from "./components/Header.jsx";
+import SiteNav from "./components/SiteNav.jsx";
+import Home from "./pages/Home.jsx";
+import Resume from "./pages/Resume.jsx";
+//import Testimonials from "./pages/Testimonials.jsx";
+//import Contact from "./pages/Contact.jsx";
+import "./styles/global.css";
 
-function App() {
+function Layout() {
+  return (
+    <div className="app-shell">
+      <Header />
+      <main className="main-area">
+        <Outlet />
+      </main>
+      <SiteNav />
+      <footer className="site-footer">© {new Date().getFullYear()} — Ray Raasch</footer>
+    </div>
+  );
+}
+
+export default function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        {/* Add other routes later: Resume, Contact, etc. */}
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="resume" element={<Resume />} />
+  
+        </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-export default App;

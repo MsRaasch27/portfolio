@@ -9,10 +9,10 @@ export default function Home() {
   const [hoveredQuadrant, setHoveredQuadrant] = useState(null);
   
   const tiles = [
-    { id: 1, className: "q1", text: "Engineer", image: engineerhatImage }, // top-left
-    { id: 2, className: "q2", text: "Educator", image: teacherhatImage }, // top-right 
-    { id: 3, className: "q3", text: "Entrepreneur", image: entrepreneurImage }, // bottom-left
-    { id: 4, className: "q4", text: "Example", image: exampleImage }, // bottom-right
+    { id: 1, className: "q1", text: "Engineer", image: engineerhatImage, tooltip: "Check out my GitHub" }, // top-left
+    { id: 2, className: "q2", text: "Educator", image: teacherhatImage, tooltip: "Book me as a tutor" }, // top-right 
+    { id: 3, className: "q3", text: "Entrepreneur", image: entrepreneurImage, tooltip: "Visit my E-Commerce site" }, // bottom-left
+    { id: 4, className: "q4", text: "Example", image: exampleImage, tooltip: "See my volunteer work" }, // bottom-right
   ];
 
   return (
@@ -25,6 +25,18 @@ export default function Home() {
             className={`quad ${t.className}`}
             onMouseEnter={() => setHoveredQuadrant(t.className)}
             onMouseLeave={() => setHoveredQuadrant(null)}
+            onClick={() => {
+              if (t.className === 'q1') {
+                window.open('https://github.com/MsRaasch27', '_blank');
+              } else if (t.className === 'q2') {
+                window.open('https://example.com/teaching-portfolio', '_blank');
+              } else if (t.className === 'q3') {
+                window.open('https://digitalcuriocabinet.com/', '_blank');
+              } else if (t.className === 'q4') {
+                window.open('https://example.com/projects', '_blank');
+              }
+            }}
+            style={{ cursor: 'pointer' }}
           >
             <div>{t.text}</div>
           </div>
@@ -44,6 +56,18 @@ export default function Home() {
             alt="" 
             className={`hat-image ${t.className}-hat ${hoveredQuadrant === t.className ? 'hovered' : ''}`}
           />
+        ))}
+        
+        {/* Tooltips */}
+        {tiles.map(t => (
+          t.tooltip && (
+            <div 
+              key={`tooltip-${t.id}`}
+              className={`tooltip ${t.className}-tooltip ${hoveredQuadrant === t.className ? 'visible' : ''}`}
+            >
+              {t.tooltip}
+            </div>
+          )
         ))}
       </div>
     </section>

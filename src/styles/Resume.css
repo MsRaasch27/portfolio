@@ -1,0 +1,77 @@
+:root {
+    --brand: #6B0F9C;
+    --brand-dark: #500B75;
+    --accent: #ffc600;
+    --ink: #0b0b0c;
+    --muted: #666;
+    --paper: #ffffff;
+    --paper-tint: rgba(107, 15, 156, 0.05);
+    --ring: rgba(107, 15, 156, 0.2);
+  }
+  
+  html { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: inherit; }
+  
+  .resume-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+  }
+  
+  .resume-section {
+    margin-bottom: 36px;
+    padding: 20px;
+    background: var(--paper-tint);
+    border-radius: 6px;
+  }
+  
+  .resume-section h2 {
+    color: var(--brand);
+    font-family: 'Amatic SC', cursive;
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .job-entry {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ring);
+  }
+  .job-entry:last-child { border-bottom: none; padding-bottom: 0; }
+  
+  .job-title { font-weight: 700; color: var(--brand); font-size: 1.05rem; }
+  .company-name { font-weight: 600; }
+  .job-date { color: var(--muted); font-style: italic; margin-top: 2px; }
+  .job-duties { margin-top: 8px; line-height: 1.6; }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .skill-item {
+    background: var(--brand);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+  }
+  .skill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12);
+  }
+  
+  @media (max-width: 768px) {
+    .resume-container { margin: 20px; padding: 16px; }
+    html { font-size: 16px; }
+  }
+  

@@ -100,6 +100,12 @@
       margin-bottom: 1rem;
     }
     
+    /* Responsive tooltip sizing */
+    .tooltip {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+    
     .overlay-layer .q1-hat {
       top: 12%;
       left: 10%;
@@ -240,5 +246,49 @@
     transform: translate(-50%, -50%) scale(1.8);
     top: 26%;
     left: 49%;
+  }
+  
+  /* Tooltip styles */
+  .tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 30;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Position tooltips for each quadrant - upper left corner */
+  .q1-tooltip {
+    top: 2%;
+    left: 2%;
+  }
+  
+  .q2-tooltip {
+    top: 2%;
+    right: 2%;
+  }
+  
+  .q3-tooltip {
+    top: 52%;
+    left: 2%;
+  }
+  
+  .q4-tooltip {
+    top: 52%;
+    right: 2%;
   }
   

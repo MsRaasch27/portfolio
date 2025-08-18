@@ -29,11 +29,11 @@ export default function Home() {
               if (t.className === 'q1') {
                 window.open('https://github.com/MsRaasch27', '_blank');
               } else if (t.className === 'q2') {
-                window.open('https://example.com/teaching-portfolio', '_blank');
+                window.open('https://raystutorsite.web.app/', '_blank');
               } else if (t.className === 'q3') {
                 window.open('https://digitalcuriocabinet.com/', '_blank');
               } else if (t.className === 'q4') {
-                window.open('https://example.com/projects', '_blank');
+                window.location.href = '/volunteer';
               }
             }}
             style={{ cursor: 'pointer' }}

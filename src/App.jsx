@@ -4,6 +4,8 @@ import SiteNav from "./components/SiteNav.jsx";
 import Home from "./pages/Home.jsx";
 import Resume from "./pages/Resume.jsx";
 import Volunteer from "./pages/Volunteer.jsx";
+import Engineer from "./pages/Engineer.jsx";
+import ClientProjects from "./pages/ClientProjects.jsx";
 //import Testimonials from "./pages/Testimonials.jsx";
 //import Contact from "./pages/Contact.jsx";
 import "./styles/global.css";
@@ -28,6 +30,8 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="resume" element={<Resume />} />
           <Route path="volunteer" element={<Volunteer />} />
+          <Route path="engineer" element={<Engineer />} />
+          <Route path="client-projects" element={<ClientProjects />} />
         </Route>
       </Routes>
     </BrowserRouter>

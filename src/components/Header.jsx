@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const location = useLocation();
   const linkClass = ({ isActive }) =>
     "nav-link" + (isActive ? " nav-link-active" : "");
 
@@ -12,7 +13,11 @@ export default function Header() {
         </nav>
         <div className="brand-section">
           <h1 className="brand">Ray Raasch</h1>
-          <p className="tagline">Many Hats • One Great Hire</p>
+          <p className="tagline">
+            {location.pathname === '/engineer' ? 'Full-stack Web Development Engineer' : 
+             location.pathname === '/volunteer' ? 'Servant Leader' : 
+             'Many Hats • One Great Hire'}
+          </p>
         </div>
         <nav className="header-nav-right">
           <a href="mailto:MsRaasch27@gmail.com" className="nav-link">Contact</a>

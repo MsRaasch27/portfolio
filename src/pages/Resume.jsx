@@ -1,3 +1,4 @@
+import { useSEO } from "../hooks/useSEO";
 import "./../styles/resume.css";
 
 const jobs = [
@@ -46,6 +47,13 @@ const skills = [
 const certifications = ["Certified Scrum Master", "CNA", "TEFL"];
 
 export default function Resume() {
+  useSEO({
+    title: "Ray Raasch - Resume | Web Development Team Lead & Software Engineer",
+    description: "Professional resume of Ray Raasch, Web Development Team Lead at Filament Games with expertise in React, TypeScript, Python, and educational technology. View experience, education, and technical skills.",
+    keywords: ["Ray Raasch", "resume", "web development team lead", "software engineer", "Filament Games", "React", "TypeScript", "Python", "educational technology", "LangChain", "OpenAI"],
+    url: "https://rayraasch.com/resume"
+  });
+
   return (
     <div className="resume-container">
       <section className="resume-section">

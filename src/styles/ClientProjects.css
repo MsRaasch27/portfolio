@@ -1,0 +1,237 @@
+.client-projects-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 16px 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: var(--muted);
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: start;
+}
+
+.project-info h2 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin: 0 0 24px 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.project-details p {
+  margin: 0 0 20px 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.project-tech {
+  margin: 32px 0;
+}
+
+.project-tech h3 {
+  font-size: 1.2rem;
+  margin: 0 0 16px 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tech-tag:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.project-links {
+  margin-top: 32px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 198, 0, 0.3);
+}
+
+/* Iframe Container */
+.iframe-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  min-height: 800px;
+}
+
+.project-iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  background: #fff;
+}
+
+/* More Projects Section */
+.more-projects {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.more-projects h2 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin: 0 0 24px 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.more-projects p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .iframe-container {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-projects-page {
+    padding: 20px 16px;
+  }
+  
+  .project-section {
+    gap: 32px;
+  }
+  
+  .project-iframe {
+    height: 500px;
+  }
+  
+  .iframe-container {
+    min-height: 500px;
+  }
+  
+  .page-header {
+    margin-bottom: 40px;
+  }
+  
+  .more-projects {
+    padding: 40px 0;
+  }
+  
+  .tech-tags {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-details p {
+    font-size: 1rem;
+  }
+  
+  .more-projects p {
+    font-size: 1rem;
+  }
+  
+  .project-iframe {
+    height: 400px;
+  }
+  
+  .iframe-container {
+    min-height: 400px;
+  }
+} 

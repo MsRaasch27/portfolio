@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSEO } from "../hooks/useSEO";
 import "../styles/home.css";
 import exampleImage from "../assets/hardhat.png";
 import engineerhatImage from "../assets/wizardhat.png";
@@ -8,6 +9,13 @@ import entrepreneurImage from "../assets/captainhat.png";
 export default function Home() {
   const [hoveredQuadrant, setHoveredQuadrant] = useState(null);
   
+  useSEO({
+    title: "Ray Raasch - Portfolio | Full-Stack Engineer, Educator & Entrepreneur",
+    description: "Ray Raasch is a versatile professional wearing many hats: full-stack web development engineer, educator, and entrepreneur. Explore my portfolio showcasing engineering projects, educational services, and entrepreneurial ventures.",
+    keywords: ["Ray Raasch", "full-stack engineer", "web developer", "educator", "entrepreneur", "React", "Node.js", "portfolio", "tutoring", "e-commerce"],
+    url: "https://rayraasch.com/"
+  });
+  
   const tiles = [
     { id: 1, className: "q1", text: "Engineer", image: engineerhatImage, tooltip: "Check out my GitHub" }, // top-left
     { id: 2, className: "q2", text: "Educator", image: teacherhatImage, tooltip: "Book me as a tutor" }, // top-right 
@@ -16,7 +24,35 @@ export default function Home() {
   ];
 
   return (
-    <section className="viewport">
+    <>
+      {/* Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Ray Raasch",
+          "jobTitle": "Full-Stack Web Development Engineer",
+          "description": "Full-stack web development engineer, educator, and entrepreneur",
+          "url": "https://rayraasch.com",
+          "sameAs": [
+            "https://github.com/MsRaasch27"
+          ],
+          "knowsAbout": [
+            "React", "Node.js", "Python", "JavaScript", "TypeScript", 
+            "MongoDB", "PostgreSQL", "AWS", "Docker", "Git"
+          ],
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Filament Games"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Fox Valley Technical College"
+          }
+        })}
+      </script>
+      
+      <section className="viewport">
       {/* Bottom layer: 2x2 grid with colored quadrants and text */}
       <div className="grid-2x2">
         {tiles.map(t => (
@@ -27,7 +63,7 @@ export default function Home() {
             onMouseLeave={() => setHoveredQuadrant(null)}
             onClick={() => {
               if (t.className === 'q1') {
-                window.open('https://github.com/MsRaasch27', '_blank');
+                window.location.href = '/engineer';
               } else if (t.className === 'q2') {
                 window.open('https://raystutorsite.web.app/', '_blank');
               } else if (t.className === 'q3') {
@@ -71,5 +107,6 @@ export default function Home() {
         ))}
       </div>
     </section>
+    </>
   );
 }

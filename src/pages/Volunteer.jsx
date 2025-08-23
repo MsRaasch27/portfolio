@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
+import { useSEO } from "../hooks/useSEO";
 import "../styles/Volunteer.css";
 import karenImage from "../assets/karen.jpeg";
 import elderImage from "../assets/elders.jpg";
 import mentoringImage from "../assets/mentoring.jpeg";
 
 export default function Volunteer() {
+  useSEO({
+    title: "Ray Raasch - Volunteer Work | Community Service & Mentoring",
+    description: "Explore Ray Raasch's volunteer work including educating underprivileged youth in Thailand, caring for senior citizens, and mentoring in technology and coding. Making a difference through community service.",
+    keywords: ["Ray Raasch", "volunteer work", "community service", "mentoring", "teaching", "Thailand", "Karen hill tribe", "senior citizens", "youth mentoring", "technology education"],
+    url: "https://rayraasch.com/volunteer"
+  });
+
   // Placeholder photo data - you can replace these with actual volunteer photos
   const volunteerPhotos = [
     {
       id: 1,
-      title: "Educating Underserved Youth",
+      title: "Educating Underprivileged Youth",
       description: "Bringing English language instruction to Karen hill tribe children in rural Thailand",
       imageUrl: karenImage,
       alt: "Teaching English to children"
@@ -24,7 +32,7 @@ export default function Volunteer() {
     {
       id: 3,
       title: "Youth Mentoring",
-      description: "Mentoring local youth in technology and coding",
+      description: "Sharing expertise in technology and coding",
       imageUrl: mentoringImage,
       alt: "Youth mentoring session"
     }
@@ -34,7 +42,6 @@ export default function Volunteer() {
   return (
     <div className="volunteer-page">
       <div className="page-header">
-        <h1>The Work that Matters the Most</h1>
         <Link to="/" className="home-button">
           ← Back to Home
         </Link>

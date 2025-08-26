@@ -38,8 +38,8 @@ export default function Home() {
             "https://github.com/MsRaasch27"
           ],
           "knowsAbout": [
-            "React", "Node.js", "Python", "JavaScript", "TypeScript", 
-            "MongoDB", "PostgreSQL", "AWS", "Docker", "Git"
+               "Python", "PHP", "JavaScript", "TypeScript", "Laravel", "Flask", "Django", "React", "Node.js", "NestJs",
+    "Relational/Non-Relational DBs", "SQL", "AWS", "Docker", "Git", "LangChain", "OpenAI", "API"
           ],
           "worksFor": {
             "@type": "Organization",

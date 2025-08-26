@@ -6,7 +6,8 @@ export default function Engineer() {
   useSEO({
     title: "Ray Raasch - Full-Stack Web Development Engineer | Portfolio",
     description: "Full-stack web development engineer specializing in React, Node.js, Python, and modern web technologies. View client projects, GitHub contributions, and technical skills.",
-    keywords: ["Ray Raasch", "full-stack engineer", "web developer", "React", "Node.js", "Python", "JavaScript", "TypeScript", "MongoDB", "PostgreSQL", "AWS", "Docker", "Git", "client projects"],
+    keywords: ["Ray Raasch", "full-stack engineer", "web developer", "Python", "PHP", "JavaScript", "TypeScript", "Laravel", "Flask", "Django", "React", "Node.js", "NestJs",
+      "Relational/Non-Relational DBs", "SQL", "AWS", "Docker", "Git", "LangChain", "OpenAI", "client projects", "work for hire"],
     url: "https://rayraasch.com/engineer"
   });
 
@@ -41,17 +42,12 @@ export default function Engineer() {
   ];
 
   const skills = [
-    "React", "Node.js", "Python", "JavaScript", "TypeScript", 
-    "MongoDB", "PostgreSQL", "AWS", "Docker", "Git"
+    "Python", "PHP", "JavaScript", "TypeScript", "Laravel", "Flask", "Django", "React", "Node.js", "NestJs",
+    "Relational/Non-Relational DBs", "SQL", "AWS", "Docker", "Git", "LangChain", "OpenAI"
   ];
 
   return (
     <div className="engineer-page">
-      <div className="page-header">
-        <Link to="/" className="home-button">
-          ← Back to Home
-        </Link>
-      </div>
 
       <div className="options-grid">
         {engineerOptions.map(option => (

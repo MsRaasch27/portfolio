@@ -41,11 +41,6 @@ export default function Volunteer() {
 
   return (
     <div className="volunteer-page">
-      <div className="page-header">
-        <Link to="/" className="home-button">
-          ← Back to Home
-        </Link>
-      </div>
 
       <div className="photo-gallery">
         {volunteerPhotos.map(photo => (

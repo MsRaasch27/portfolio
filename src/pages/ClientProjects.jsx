@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSEO } from "../hooks/useSEO";
+import wilsonCenterVideo from "../assets/wilson_center.mp4";
 import "../styles/ClientProjects.css";
 
 export default function ClientProjects() {
@@ -18,15 +19,11 @@ export default function ClientProjects() {
         </Link>
       </div>
 
+      <h2 className="project-title">Wilson Center Orbit Interactive</h2>
+
       <div className="project-section">
         <div className="project-info">
-          <h2>Wilson Center Orbit Interactive</h2>
           <div className="project-details">
-            <p>
-              I developed an interactive data visualization platform for the Wilson Center, 
-              a prestigious think tank in Washington, DC. This project showcases their extensive 
-              research and analysis through an engaging, user-friendly interface.
-            </p>
             <div className="project-tech">
               <h3>Technologies Used:</h3>
               <div className="tech-tags">
@@ -38,6 +35,11 @@ export default function ClientProjects() {
                 <span className="tech-tag">HTML/CSS</span>
               </div>
             </div>
+            <p>
+              I developed an interactive data visualization platform for the Wilson Center, 
+              a prestigious think tank in Washington, DC. This project showcases their extensive 
+              research and analysis through an engaging, user-friendly interface.
+            </p>
             <div className="project-links">
               <a 
                 href="https://www.wilsoncenter.org/interactives/orbit" 
@@ -52,12 +54,17 @@ export default function ClientProjects() {
         </div>
 
         <div className="iframe-container">
-          <iframe
-            src="https://www.wilsoncenter.org/interactives/orbit"
-            title="Wilson Center Orbit Interactive"
+          <video
+            src={wilsonCenterVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
             className="project-iframe"
-            loading="lazy"
-          />
+          >
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 

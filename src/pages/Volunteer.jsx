@@ -41,7 +41,7 @@ export default function Volunteer() {
       id: 4,
       title: "Certified Yoga Instructor",
       description: "Volunteering as a yoga instructor, improving guest experience for hotel guests across the globe",
-      imageUrl: mentoringImage,
+      imageUrl: yogaImage,
       alt: "Volunteer yoga teaching"
     }
 

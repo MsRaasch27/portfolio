@@ -48,6 +48,11 @@ export default function Engineer() {
 
   return (
     <div className="engineer-page">
+      <div className="page-header">
+        <Link to="/" className="home-button">
+          ← Back to Home
+        </Link>
+      </div>
 
       <div className="options-grid">
         {engineerOptions.map(option => (

@@ -46,6 +46,16 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Project Title */
+.project-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin: 0 auto 60px;
+  color: var(--text);
+  font-weight: 600;
+  max-width: 1400px;
+}
+
 /* Project Section */
 .project-section {
   display: grid;
@@ -146,7 +156,17 @@
   width: 100%;
   height: 800px;
   border: none;
-  background: #fff;
+  background: #000;
+  object-fit: contain;
+  display: block;
+}
+
+.project-iframe::-webkit-media-controls {
+  display: none !important;
+}
+
+.project-iframe::-webkit-media-controls-enclosure {
+  display: none !important;
 }
 
 /* More Projects Section */

@@ -4,6 +4,7 @@ import "../styles/Volunteer.css";
 import karenImage from "../assets/karen.jpeg";
 import elderImage from "../assets/elders.jpg";
 import mentoringImage from "../assets/mentoring.jpeg";
+import yogaImage from "../assets/yoga_beach.png";
 
 export default function Volunteer() {
   useSEO({
@@ -35,6 +36,13 @@ export default function Volunteer() {
       description: "Sharing expertise in technology and coding",
       imageUrl: mentoringImage,
       alt: "Youth mentoring session"
+    },
+    {
+      id: 4,
+      title: "Certified Yoga Instructor",
+      description: "Volunteering as a yoga instructor, improving guest experience for hotel guests across the globe",
+      imageUrl: mentoringImage,
+      alt: "Volunteer yoga teaching"
     }
 
   ];

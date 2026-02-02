@@ -13,8 +13,6 @@ export default function ClientProjects() {
   return (
     <div className="client-projects-page">
       <div className="page-header">
-        <h1>Client Projects</h1>
-        <p className="subtitle">Showcasing my work on impactful web applications</p>
         <Link to="/engineer" className="back-button">
           ← Back to Engineer
         </Link>

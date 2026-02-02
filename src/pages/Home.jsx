@@ -17,10 +17,10 @@ export default function Home() {
   });
   
   const tiles = [
-    { id: 1, className: "q1", text: "Engineer", image: engineerhatImage, tooltip: "Check out my GitHub" }, // top-left
+    { id: 1, className: "q1", text: "Engineer", image: engineerhatImage, tooltip: "Check out my work" }, // top-left
     { id: 2, className: "q2", text: "Educator", image: teacherhatImage, tooltip: "Book me as a tutor" }, // top-right 
     { id: 3, className: "q3", text: "Entrepreneur", image: entrepreneurImage, tooltip: "Visit my E-Commerce site" }, // bottom-left
-    { id: 4, className: "q4", text: "Example", image: exampleImage, tooltip: "See my volunteer work" }, // bottom-right
+    { id: 4, className: "q4", text: "Example", image: exampleImage, tooltip: "See volunteer experience" }, // bottom-right
   ];
 
   return (

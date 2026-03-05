@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { useSEO } from "../hooks/useSEO";
 import wilsonCenterVideo from "../assets/wilson_center.mp4";
+import plasmatronicsVideo from "../assets/plasmatronics.mp4";
 import "../styles/ClientProjects.css";
 
 export default function ClientProjects() {
   useSEO({
     title: "Ray Raasch - Client Projects | Web Development Portfolio",
-    description: "View Ray Raasch's client projects including the Wilson Center Orbit Interactive data visualization platform. Showcasing impactful web applications built with React, D3.js, and modern technologies.",
-    keywords: ["Ray Raasch", "client projects", "web development", "Wilson Center", "data visualization", "React", "D3.js", "Pixi.js", "interactive applications", "portfolio"],
+    description: "View Ray Raasch's client projects including the Wilson Center Orbit Interactive data visualization platform and the Hill Plasmatronics experience. Showcasing impactful web applications built with React, D3.js, and modern technologies.",
+    keywords: ["Ray Raasch", "client projects", "web development", "data visualization", "React", "D3.js", "Pixi.js", "interactive applications", "portfolio"],
     url: "https://rayraasch.com/client-projects"
   });
 
@@ -68,13 +69,38 @@ export default function ClientProjects() {
         </div>
       </div>
 
-      <div className="more-projects">
-        <h2>More Projects Coming Soon</h2>
-        <p>
-          I'm currently working on additional client projects that will be showcased here. 
-          Each project demonstrates my commitment to creating meaningful, impactful web applications 
-          that solve real-world problems.
-        </p>
+      <h2 className="project-title">Hill Plasmatronics</h2>
+
+      <div className="project-section">
+        <div className="project-info">
+          <div className="project-details">
+            <div className="project-tech">
+              <h3>Technologies Used:</h3>
+              <div className="tech-tags">
+                <span className="tech-tag">React</span>
+                <span className="tech-tag">HTML/CSS</span>
+                <span className="tech-tag">Google Cloud Provider</span>
+              </div>
+            </div>
+            <p>
+              This client wanted their old site moved off WordPress and a new sleek modern design to sell their high-end audio project.  I designed this using React Typescript and CSS transitions.
+            </p>
+          </div>
+        </div>
+
+        <div className="iframe-container">
+          <video
+            src={plasmatronicsVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="project-iframe"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   );

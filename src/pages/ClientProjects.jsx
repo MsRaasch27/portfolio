@@ -88,7 +88,7 @@ export default function ClientProjects() {
           </div>
         </div>
 
-        <div className="iframe-container">
+        <div className="iframe-container iframe-container--plasmatronics">
           <video
             src={plasmatronicsVideo}
             autoPlay
